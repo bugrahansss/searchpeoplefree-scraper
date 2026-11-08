@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "searchpeoplefree-scraper"
+version = "0.1.0"
+description = "Scrape SearchPeopleFree.com profile pages (name, exact age, address, phones, emails, spouse, relatives) with Python."
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Buğrahan Saka" }]
+keywords = ["searchpeoplefree", "web scraping", "people search", "scraper", "json-ld", "datadome", "cloudflare"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Topic :: Internet :: WWW/HTTP :: Indexing/Search",
+]
+dependencies = ["requests>=2.25", "beautifulsoup4>=4.9"]
+
+[project.urls]
+Homepage = "https://github.com/bugrahansss/searchpeoplefree-scraper"
+Source = "https://github.com/bugrahansss/searchpeoplefree-scraper"
+Issues = "https://github.com/bugrahansss/searchpeoplefree-scraper/issues"
+Guide = "https://scrape.do/blog/search-people-free-scraping/"
+
+[project.scripts]
+searchpeoplefree-scraper = "searchpeoplefree_scraper.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
